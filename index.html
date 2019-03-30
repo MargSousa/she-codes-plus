@@ -23,8 +23,8 @@
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4">
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary">ºC</button>
-                        <button type="button" class="btn btn-secondary">ºF</button>
+                        <button type="button" class="btn btn-secondary temp-type">º C</button>
+                        <button type="button" class="btn btn-secondary temp-type">º F</button>
                     </div>
                 </div> 
                 <div class="col-sm-4"></div>    
@@ -33,17 +33,26 @@
         <div class="current-location"><h2>myLocation</h2></div>
         <div class="row location-box">
             <div class="col-sm-4">
-                <h3>LISBON</h3>
-                <h4>Portugal</h4>
-                <p>13:05</p>
-                <p>22ºC</p>
+                <div class="local-information">
+                    <h4>Portugal</h4>
+                    <p>13:05</p>
+                    <p>22ºC</p>
+                </div>
+                <div class="rise-set">
+                    <div>
+                        <p><img src="images/weather_icons/Sunrise.png" class="img-sunrise"> 06:05</p>
+                    </div>
+                    <div>
+                        <p><img src="images/weather_icons/Sunset.png" class="img-sunrise"> 19:45</p>
+                    </div>
+                </div>
             </div>
             <div class="col-sm-4">
                 <img src="images/weather_icons/Sunny.png" alt="">
                 <p>22ºC</p> 
             </div>
-            <div class="col-sm-4 weekly-prev">
-                <div class="row"><h5>Weekly Forecast</h5></div>
+            <div class="weekly-prev">
+                <div class="week-title"><h5>Weekly Forecast</h5></div><br>
                 <div class="row">
                     <div class="col-sm-4"><p>THU</p></div>
                     <div class="col-sm-4"><img src="images/weather_icons/Sunny.png" class="img-week"></div>

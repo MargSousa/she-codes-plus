@@ -4,6 +4,11 @@ body {
     margin: auto 0;
 }
 
+.search-text {
+    font-size: 18px;
+    font-style: italic;
+}
+
 h1 {
     font-family: "Poiret One";
     font-size: 40px;
@@ -30,21 +35,22 @@ h4 {
     font-style: bold;
 };
 
-p {
-    font-size: 40px;
-};
-
-.week-title {
-    font-size: 26px;
-}
-
 .search-text {
-    font-size: 35px;
+    font-size: 30px;
     font-style: italic;
 }
 .search-icon {
     font-size: 20px;
     margin: 5px;
+}
+
+.temp-type {
+    font-size: 18px;
+    font-family: "Poiret One";
+}
+
+.img-sunrise {
+    width: 20%;
 }
 
 .location-box {
@@ -54,6 +60,14 @@ p {
     border-style: solid;
     border-color:rgb(199, 196, 196);
     border-radius: 5px;
+}
+
+.week-title {
+    font-size: 26px;
+    text-align: center; 
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color:rgb(199, 196, 196);
 }
 
 .img-week {
