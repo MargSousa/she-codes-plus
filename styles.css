@@ -1,0 +1,38 @@
+body {
+    font-family: "Barlow Condensed";
+    text-align: center;
+    margin: auto 0;
+}
+
+h1 {
+    font-family: "Poiret One";
+    font-size: 40px;
+    font-weight: 100px;
+    margin: 50px;
+}
+
+h2 {
+    font-size: 34px;
+    font-family: "Poiret One";
+    text-align: left;
+    padding: 30px;
+}
+
+h3 {
+    font-size: 28px;
+    font-family: "Barlow Condensed";
+};
+
+h4 {
+    font-size: 28px;
+    font-family: "Barlow Condensed";
+};
+
+.search-text {
+    font-size: 35px;
+    font-style: italic;
+}
+.search-icon {
+    font-size: 20px;
+    margin: 5px;
+}
