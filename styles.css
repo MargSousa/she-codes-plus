@@ -15,7 +15,8 @@ h2 {
     font-size: 34px;
     font-family: "Poiret One";
     text-align: left;
-    padding: 30px;
+    padding: 20px;
+    margin-left: 80px;
 }
 
 h3 {
@@ -28,6 +29,10 @@ h4 {
     font-family: "Barlow Condensed";
 };
 
+p {
+    font-size: 22px;
+};
+
 .search-text {
     font-size: 35px;
     font-style: italic;
@@ -35,4 +40,22 @@ h4 {
 .search-icon {
     font-size: 20px;
     margin: 5px;
+}
+
+.location-box {
+    padding: 30px;
+    margin: 0 80px 20px 80px;
+    border-width: 1px;
+    border-style: solid;
+    border-color:rgb(199, 196, 196);
+    border-radius: 5px;
+}
+
+.cities-collection {
+    margin: 0 80px 80px 80px;
+}
+
+.card-box {
+    border-style: solid;
+    border-color: rgb(199, 196, 196);
 }

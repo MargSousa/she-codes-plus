@@ -16,16 +16,21 @@
         <div>
             <input type="text" placeholder="Search location" class="search-text">
             <i class="fas fa-search search-icon"></i>
-        </div><br>
-        <div>
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-secondary">ºC</button>
-                <button type="button" class="btn btn-secondary">ºF</button>
-            </div>
-        </div><br>
+        </div>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary">ºC</button>
+                    <button type="button" class="btn btn-secondary">ºF</button>
+                </div>
+            </div>    
+            <div class="col-sm-4"></div>    
+        </div>
     </div>
     <div class="current-location"><h2>myLocation</h2></div>
-    <div class="row">
+    <div class="row location-box">
         <div class="col-sm-6">
             <div class="col-sm-6">
                 <h3>LISBON</h3>
@@ -43,61 +48,76 @@
             <div class="row">
                 <div class="col-sm-4"><p>THU</p></div>
                 <div class="col-sm-4"><img src="" class="img-week"></div>
-                <div class="col-sm-4"><p>25º/13ºC</p></div>
+                <div class="col-sm-4"><p>25º / 13ºC</p></div>
             </div>
             <div class="row">
                 <div class="col-sm-4"><p>FRI</p></div>
                 <div class="col-sm-4"><img src="" class="img-week"></div>
-                <div class="col-sm-4"><p>25º/13ºC</p></div>
+                <div class="col-sm-4"><p>25º / 13ºC</p></div>
             </div>
             <div class="row">
                 <div class="col-sm-4"><p>SAT</p></div>
                 <div class="col-sm-4"><img src="" class="img-week"></div>
-                <div class="col-sm-4"><p>25º/13ºC</p></div>
+                <div class="col-sm-4"><p>25º / 13ºC</p></div>
             </div>
             <div class="row">
                 <div class="col-sm-4"><p>SUN</p></div>
                 <div class="col-sm-4"><img src="" class="img-week"></div>
-                <div class="col-sm-4"><p>25º/13ºC</p></div>
+                <div class="col-sm-4"><p>25º / 13ºC</p></div>
             </div>
             <div class="row">
                 <div class="col-sm-4"><p>MON</p></div>
                 <div class="col-sm-4"><img src="" class="img-week"></div>
-                <div class="col-sm-4"><p>25º/13ºC</p></div>
+                <div class="col-sm-4"><p>25º / 13ºC</p></div>
             </div>
             <div class="row">
                 <div class="col-sm-4"><p>TUE</p></div>
                 <div class="col-sm-4"><img src="" class="img-week"></div>
-                <div class="col-sm-4"><p>25º/13ºC</p></div>
+                <div class="col-sm-4"><p>25º / 13ºC</p></div>
             </div>
         </div>
     </div>
     <div class="cities"><h2>myCities</h2></div>
-    <div class="row">
-        <div class="col-sm-3">
-            <h3>CONVENTRY</h3>
-            <h4>United Kingdom</h4>
-            <p>13:05</p>
-            <img src="" class="img-box">
-            <p>11ºC</p>
+
+    <div class="card-deck cities-collection">
+        <div class="card card-box">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">CONVENTRY</h4>
+                <h5>United Kingdom</h5>
+                <p>13:05</p>
+                <img src="" class="img-box">
+                <p>11ºC</p>
+            </div>
         </div>
-        <div class="col-sm-3">
-            <h3>MADRID</h3>
-            <h4>Spain</h4>
-            <p>14:05</p>
-            <img src="" class="img-box">
-            <p>19ºC</p>
+        <div class="card card-box">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">MADRID</h4>
+                <h5>Spain</h5>
+                <p>14:05</p>
+                <img src="" class="img-box">
+                <p>22ºC</p>
+            </div>
         </div>
-        <div class="col-sm-3">
-            <h3>AUCKLAND</h3>
-            <h4></h4>New Zealand</h4>
-            <p>02:05</p>
-            <img src="" class="img-box">
-            <p>19ºC</p>
-        </div>        
-        <div class="col-sm-3">
-            <h3>ADD NEW LOCATION +</h3>
+        <div class="card card-box">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">AUCKLAND</h4>
+                <h5>New Zealand</h5>
+                <p>02:05</p>
+                <img src="" class="img-box">
+                <p>19ºC</p>
+            </div>
         </div>
-    <div>
+        <div class="card card-box">
+            <div class="card-body">
+                <h4 class="card-title new-location">ADD</h4>
+                <h4 class="card-title new-location">NEW</h4>
+                <h4 class="card-title new-location">LOCATION</h4>
+                <h4 class="card-title new-location">+ </h4>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
