@@ -25,7 +25,7 @@ h3 {
 
 h4 {
     font-size: 12px;
-    font-family: "Barlow Condensed";
+    font-family: "Poiret One";
     font-style: bold;
 };
 
@@ -55,6 +55,20 @@ h4 {
     border-style: solid;
     border-color:rgb(199, 196, 196);
     border-radius: 5px;
+}
+
+.local-forecast {
+    width: 65%;
+}
+
+span {
+    content: "\00B0";
+    font-size: 20px;
+}
+  
+span.degrees {
+    content: "\00B0";
+    font-size: 32px;
 }
 
 .week-title {
