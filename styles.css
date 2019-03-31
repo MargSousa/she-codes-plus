@@ -1,12 +1,6 @@
 body {
     font-family: "Barlow Condensed";
     text-align: center;
-    margin: auto 0;
-}
-
-.search-text {
-    font-size: 18px;
-    font-style: italic;
 }
 
 h1 {
@@ -17,7 +11,7 @@ h1 {
 }
 
 h2 {
-    font-size: 34px;
+    font-size: 36px;
     font-family: "Poiret One";
     text-align: left;
     padding: 20px;
@@ -25,7 +19,7 @@ h2 {
 }
 
 h3 {
-    font-size: 28px;
+    font-size: 40px;
     font-family: "Barlow Condensed";
 };
 
@@ -35,17 +29,18 @@ h4 {
     font-style: bold;
 };
 
-.search-text {
-    font-size: 30px;
-    font-style: italic;
+.active-cyan-4 input[type=text]:focus:not([readonly]) {
+    border: 1px solid #4dd0e1;
+    box-shadow: 0 0 0 1px #4dd0e1;
 }
-.search-icon {
-    font-size: 20px;
-    margin: 5px;
+
+.search-box {
+    text-align: center;
+    font-size: 18px;
 }
 
 .temp-type {
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Poiret One";
 }
 
@@ -63,7 +58,6 @@ h4 {
 }
 
 .week-title {
-    font-size: 26px;
     text-align: center; 
     border-bottom-width: 1px;
     border-bottom-style: solid;

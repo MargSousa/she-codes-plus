@@ -14,10 +14,16 @@
     <div class="container">
         <div class="header">
             <h1>myWeather</h1>
-            <div>
-                <input type="text" placeholder="Search location" class="search-text">
-                <i class="fas fa-search search-icon"></i>
-            </div><br>
+            <div class="row search-box">
+                <div class="col-sm"></div>
+                <div class="col-sm-3">
+                    <form class="form-inline active-cyan-4">
+                        <input class="form-control form-control-sm mr-3 w-75 search-box" type="text" placeholder="Search" aria-label="Search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </form>                   
+                </div>
+                <div class="col-sm"></div>
+            </div>
             <div class="row">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4"></div>
@@ -37,7 +43,7 @@
                     <h4>Portugal</h4>
                     <p>13:05</p>
                     <p>22ºC</p>
-                </div>
+                </div><br>
                 <div class="rise-set">
                     <div>
                         <p><img src="images/weather_icons/Sunrise.png" class="img-sunrise"> 06:05</p>
@@ -106,7 +112,7 @@
                 </div>
             </div>
             <div class="card card-box">
-                <div class="card-body">
+                <div class="card-body card-text">
                     <h4 class="card-title">AUCKLAND</h4>
                     <h5>New Zealand</h5>
                     <p>02:05</p>
