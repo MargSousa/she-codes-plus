@@ -51,11 +51,11 @@ h4 {
 }
 
 .img-sunrise {
-    width: 20%;
+    width: 22%;
 }
 
 .location-box {
-    padding: 30px;
+    padding: 15px;
     margin: 0 80px 20px 80px;
     border-width: 1px;
     border-style: solid;
@@ -64,7 +64,7 @@ h4 {
 }
 
 .local-forecast {
-    width: 65%;
+    width: 55%;
 }
 
 span {
@@ -75,6 +75,10 @@ span {
 span.degrees {
     content: "\00B0";
     font-size: 32px;
+}
+
+.current-description {
+    text-transform: capitalize;
 }
 
 .week-title {
@@ -95,10 +99,6 @@ span.degrees {
 .card-box {
     border-style: solid;
     border-color: rgb(199, 196, 196);
-}
-
-.cities-collection {
-    margin: 0 80px 80px 80px;
 }
 
 .img-city {

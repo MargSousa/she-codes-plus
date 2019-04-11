@@ -1,6 +1,37 @@
 function handlePosition(position) {
-  console.log(position.coords.latitude);
-  console.log(position.coords.longitude);
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  console.log(latitude);
+  console.log(longitude);
+
+  let units = "metric";
+  let apiKey = "e4e4d6ef596a82924b1c141ba55e4e37";
+  let apiUrl = "https://api.openweathermap.org/data/2.5";
+  let apiParams = `lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+  let apiPath = `weather?${apiParams}`;
+
+  axios.get(`${apiUrl}/${apiPath}`).then(function(response){
+    let currentCity = response.data.name;
+    let currentCountry = response.data.sys.country;
+    let currentTemperature = Math.round(response.data.main.temp);
+    let currentWind = Math.round(response.data.wind.speed * 3.6);
+    let currentDescription = response.data.weather[0].description;
+    let currentSunrise = response.data.sys.sunrise;
+    let currentSunset = response.data.sys.sunset;
+    let currentHumidity = response.data.main.humidity;
+    
+// falta converter HORAS UNIX sunrise e sunset
+// Converter PT em Portugal 
+    
+    document.querySelector(".current-city").innerHTML = `${currentCity}`;
+    document.querySelector(".current-temperature").innerHTML = `${currentTemperature}&#176;</span>C`;
+    document.querySelector(".current-description").innerHTML = `${currentDescription}`;
+    document.querySelector(".current-humidity").innerHTML = `Humidity: ${currentHumidity}%`;
+    document.querySelector(".current-wind").innerHTML = `Wind: ${currentWind} km/h`;
+    document.querySelector(".current-country").innerHTML = `${currentCountry}`;
+
+    console.log(response.data.sys.country);
+  })
 }
 
 navigator.geolocation.getCurrentPosition(handlePosition);
@@ -22,23 +53,22 @@ function formatDate(date) {
   if (minutesNow < 10) {
     return `0${minutesNow}`;
   }
+
   if (hoursNow < 10) {
     periodTime = "AM";
   } else {
     periodTime = "PM";
   }
-  
-  console.log(weekNow);
-  console.log(monthNow);
-  console.log(yearNow);
-  console.log(dayNow);
-  console.log(periodTime);
 
   let searchTime = `${weekNow} ${hoursNow}:${minutesNow} ${periodTime}`;
   console.log(searchTime);
 
-  let time1 = document.querySelector(".time-search")
-  time1.innerHTML = `${searchTime}`;
+  let timeSearch = document.querySelector(".time-search")
+  timeSearch.innerHTML = `${searchTime}`;
+
+  let timeCurrentLocation = document.querySelector(".current-time-location");
+  timeCurrentLocation.innerHTML = `${hoursNow}:${minutesNow}`;
+
 }
 
 let nowDate = formatDate(now);
