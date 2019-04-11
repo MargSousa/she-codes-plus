@@ -42,10 +42,8 @@ function handlePosition(position) {
     document.querySelector(".current-country").innerHTML = `${currentCountry}`;
     document.querySelector(".current-sunrise").innerHTML = `${currentSunrise}`;
     document.querySelector(".current-sunset").innerHTML = `${currentSunset}`;
-
-    console.log(response.data.sys.country);
-  })
-}
+  });
+};
 
 navigator.geolocation.getCurrentPosition(handlePosition);
 
@@ -69,13 +67,12 @@ function formatDate(date) {
 
   if (hoursNow < 10) {
     periodTime = "AM";
-    return `0${minutesNow}`;
+    hoursNow = `0${hoursNow}`
   } else {
     periodTime = "PM";
-  }
+  };
 
   let searchTime = `${weekNow} ${hoursNow}:${minutesNow} ${periodTime}`;
-  console.log(searchTime);
 
   let timeSearch = document.querySelector(".time-search")
   timeSearch.innerHTML = `${searchTime}`;
@@ -86,4 +83,3 @@ function formatDate(date) {
 }
 
 let nowDate = formatDate(now);
-
