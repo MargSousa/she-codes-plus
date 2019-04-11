@@ -36,7 +36,13 @@ h4 {
 
 .search-box {
     text-align: center;
+    width: 250px;
+    margin: 0 auto;
     font-size: 18px;
+}
+.time-search{
+    font-size: 18px;
+    margin-top: 5px;
 }
 
 .temp-type {
