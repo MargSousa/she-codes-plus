@@ -16,11 +16,22 @@ function handlePosition(position) {
     let currentTemperature = Math.round(response.data.main.temp);
     let currentWind = Math.round(response.data.wind.speed * 3.6);
     let currentDescription = response.data.weather[0].description;
-    let currentSunrise = response.data.sys.sunrise;
-    let currentSunset = response.data.sys.sunset;
     let currentHumidity = response.data.main.humidity;
+
+    let sunriseTime = response.data.sys.sunrise;
+    let sunsetTime = response.data.sys.sunset;
+
+    let sunsetUnix = new Date(sunsetTime*1000);
+    let sunsetHours= sunsetUnix.getHours();
+    let sunsetMinutes = "0" + sunsetUnix.getMinutes();
+
+    let sunriseUnix = new Date(sunriseTime*1000);
+    let sunriseHours= "0" + sunriseUnix.getHours();
+    let sunriseMinutes = "0" + sunriseUnix.getMinutes();
+
+    let currentSunrise = `${sunriseHours}:${sunriseMinutes}`;
+    let currentSunset = `${sunsetHours}:${sunsetMinutes}`;
     
-// falta converter HORAS UNIX sunrise e sunset
 // Converter PT em Portugal 
     
     document.querySelector(".current-city").innerHTML = `${currentCity}`;
@@ -29,6 +40,8 @@ function handlePosition(position) {
     document.querySelector(".current-humidity").innerHTML = `Humidity: ${currentHumidity}%`;
     document.querySelector(".current-wind").innerHTML = `Wind: ${currentWind} km/h`;
     document.querySelector(".current-country").innerHTML = `${currentCountry}`;
+    document.querySelector(".current-sunrise").innerHTML = `${currentSunrise}`;
+    document.querySelector(".current-sunset").innerHTML = `${currentSunset}`;
 
     console.log(response.data.sys.country);
   })
@@ -56,6 +69,7 @@ function formatDate(date) {
 
   if (hoursNow < 10) {
     periodTime = "AM";
+    return `0${minutesNow}`;
   } else {
     periodTime = "PM";
   }
