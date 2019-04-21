@@ -41,7 +41,8 @@ function handlePosition(position) {
 // Converter PT em Portugal 
     
     document.querySelector("#current-city").innerHTML = `${currentCity}`;
-    document.querySelector("#current-country").innerHTML = `${currentCountry}`;
+//    document.querySelector("#current-country").innerHTML = `${currentCountry}`;
+    document.querySelector("#current-country").innerHTML = `Portugal`;
     document.querySelector("#current-sunrise").innerHTML = `${currentSunrise}`;
     document.querySelector("#current-sunset").innerHTML = `${currentSunset}`;
     document.querySelector("#current-temperature").innerHTML = `${currentTemperature}°C`;
