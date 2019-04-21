@@ -29,6 +29,10 @@ h4 {
     font-style: bold;
 };
 
+span {
+    font-size: 20px;
+}
+
 .active-cyan-4 input[type=text]:focus:not([readonly]) {
     border: 1px solid #4dd0e1;
     box-shadow: 0 0 0 1px #4dd0e1;
@@ -36,9 +40,17 @@ h4 {
 
 .search-box {
     text-align: center;
-    width: 250px;
+    width: 400px;
     margin: 0 auto;
     font-size: 18px;
+}
+
+button {
+    margin-left: 10px;
+}
+
+.btn-primary {
+    margin-left: 5px;
 }
 
 .time-search{
@@ -57,10 +69,6 @@ h4 {
 
 .current-header {
     margin-right: 100px;
-}
-
-span {
-    font-size: 20px;
 }
 
 .location-box {
