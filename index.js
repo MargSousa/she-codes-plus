@@ -40,14 +40,14 @@ function handlePosition(position) {
     
 // Converter PT em Portugal 
     
-    document.querySelector(".current-city").innerHTML = `${currentCity}`;
-    document.querySelector(".current-temperature").innerHTML = `${currentTemperature}&#176;</span>C`;
-    document.querySelector(".current-description").innerHTML = `${currentDescription}`;
-    document.querySelector(".current-humidity").innerHTML = `Humidity: ${currentHumidity}%`;
-    document.querySelector(".current-wind").innerHTML = `Wind: ${currentWind} km/h`;
-    document.querySelector(".current-country").innerHTML = `${currentCountry}`;
-    document.querySelector(".current-sunrise").innerHTML = `${currentSunrise}`;
-    document.querySelector(".current-sunset").innerHTML = `${currentSunset}`;
+    document.querySelector("#current-city").innerHTML = `${currentCity}`;
+    document.querySelector("#current-country").innerHTML = `${currentCountry}`;
+    document.querySelector("#current-sunrise").innerHTML = `${currentSunrise}`;
+    document.querySelector("#current-sunset").innerHTML = `${currentSunset}`;
+    document.querySelector("#current-temperature").innerHTML = `${currentTemperature}°C`;
+    document.querySelector("#current-description").innerHTML = `${currentDescription}`;
+    document.querySelector("#current-humidity").innerHTML = `Humidity: ${currentHumidity}%`;
+    document.querySelector("#current-wind").innerHTML = `Wind: ${currentWind} km/h`;
   });
 };
 
@@ -80,10 +80,10 @@ function formatDate(date) {
 
   let searchTime = `${weekNow} ${hoursNow}:${minutesNow} ${periodTime}`;
 
-  let timeSearch = document.querySelector(".time-search")
+  let timeSearch = document.querySelector("#time-search")
   timeSearch.innerHTML = `${searchTime}`;
 
-  let timeCurrentLocation = document.querySelector(".current-time-location");
+  let timeCurrentLocation = document.querySelector("#current-time-location");
   timeCurrentLocation.innerHTML = `${hoursNow}:${minutesNow}`;
 
 }

@@ -21,42 +21,41 @@
                     <i class="fas fa-search" aria-hidden="true"></i>
                 </form>
             </div>
-            <div class="time-search">Thursday 20:00 PM</div>
+            <div id="time-search" class="time-search">Thursday 20:00 PM</div>
         </div>
         <div class="current-location">
-            <div class="row current-header">
-                <span class="current-title"><h2>myLocation</h2></span>
-                <span class="btn-temperature">
+            <div class="clearfix current-header">
+                <div class="float-left current-title"><h2>myLocation</h2></div>
+                <div class="float-right btn-temperature">
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <button type="button" class="btn btn-secondary temp-type">°C</button>
                         <button type="button" class="btn btn-secondary temp-type">°F</button>
                     </div>
-                </span>
+                </div>
             </div>
             <div class="row location-box">
-                <div class="col-sm-3">
+                <div class="col-sm-4">
                     <div class="local-information"><br>
-                        <h3 class="current-city">LISBOA</h3>
                         <h4 class="current-country">Portugal</h4>
-                        <h3 class="current-time-location">13:05</h3>
+                        <h3 id="current-time-location">13:05</h3>
                     </div><br>
                     <div class="rise-set">
                         <div>
-                            <img src="images/weather_icons/Sunrise.png" class="img-sunrise"><span class="current-sunrise"> 06:05</span>
+                            <img src="images/weather_icons/Sunrise.png" class="img-sunrise"><span id="current-sunrise"> 04:05</span>
                         </div>
                         <div>
-                            <img src="images/weather_icons/Sunset.png" class="img-sunrise"><span class="current-sunset">19:45</span>
+                            <img src="images/weather_icons/Sunset.png" class="img-sunrise"><span id="current-sunset">18:45</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-3"><br>
                     <img src="images/weather_icons/Sunny.png" alt="forecast" class="local-forecast">
-                    <h3 class="current-temperature">22<span class="degrees">&#176;</span>C</h3> 
-                    <h4 class="current-description">Description</h4>
-                    <h6 class="current-humidity">Humidity: 25%</h6>
-                    <h6 class="current-wind">Wind: 2,4 km/h</h6>
+                    <h3 id="current-temperature">22°C</h3>
+                    <h4 id="current-description">Description</h4><br>
+                    <h5 id="current-humidity">Humidity: 41%</h5>
+                    <h5 id="current-wind">Wind: 2,4 km/h</h5>
                 </div>
-                <div class="col-sm weekly-prev">
+                <div class="col-sm-5 weekly-prev">
                     <div class="week-title"><h5>Weekly Forecast</h5></div><br>
                     <div class="row">
                         <div class="col-sm-4"><h4>THU</h4></div>
@@ -66,27 +65,27 @@
                     <div class="row">
                         <div class="col-sm-4"><h4>FRI</h4></div>
                         <div class="col-sm-4"><img src="images/weather_icons/SunClouds.png" class="img-week"></div>
-                        <div class="col-sm-4"><h4>25<span>&#176;</span> / 12<span>&#176;</span>C</h4></div>
+                        <div class="col-sm-4"><h4>25° / 12°C</h4></div>
                     </div>
                     <div class="row">
                         <div class="col-sm-4"><h4>SAT</h4></div>
                         <div class="col-sm-4"><img src="images/weather_icons/SunCloudWindy.png" class="img-week"></div>
-                        <div class="col-sm-4"><h4>25<span>&#176;</span> / 13<span>&#176;</span>C</h4></div>
+                        <div class="col-sm-4"><h4>25° / 13°C</h4></div>
                     </div>
                     <div class="row">
                         <div class="col-sm-4"><h4>SUN</h4></div>
                         <div class="col-sm-4"><img src="images/weather_icons/Cloudy.png" class="img-week"></div>
-                        <div class="col-sm-4"><h4>25<span>&#176;</span> / 14<span>&#176;</span>C</h4></div>
+                        <div class="col-sm-4"><h4>25° / 14°C</h4></div>
                     </div>
                     <div class="row">
                         <div class="col-sm-4"><h4>MON</h4></div>
                         <div class="col-sm-4"><img src="images/weather_icons/Sunny.png" class="img-week"></div>
-                        <div class="col-sm-4"><h4>25<span>&#176;</span> / 13<span>&#176;</span>C</h4></div>
+                        <div class="col-sm-4"><h4>25° / 13°C</h4></div>
                     </div>
                     <div class="row">
                         <div class="col-sm-4"><h4>TUE</h4></div>
                         <div class="col-sm-4"><img src="images/weather_icons/SunClouds.png" class="img-week"></div>
-                        <div class="col-sm-4"><h4>25<span>&#176;</span> / 13<span>&#176;</span>C</h4></div>
+                        <div class="col-sm-4"><h4>25° / 13°C</h4></div>
                     </div>
                 </div>
             </div>
@@ -99,7 +98,7 @@
                     <h5>United Kingdom</h5>
                     <h5>13:05</h5>
                     <img src="images/weather_icons/Cloudy.png" class="img-city">
-                    <h4>11<span>&#176;</span>C</h4>
+                    <h4>11°C</h4>
                 </div>
             </div>
             <div class="card card-box">
@@ -108,7 +107,7 @@
                     <h5>Spain</h5>
                     <h5>14:05</h5>
                     <img src="images/weather_icons/Sunny.png" class="img-city">
-                    <h4>22<span>&#176;</span>C</h4>
+                    <h4>22°C</h4>
                 </div>
             </div>
             <div class="card card-box">
@@ -117,7 +116,7 @@
                     <h5>New Zealand</h5>
                     <h5>02:05</h5>
                     <img src="images/weather_icons/Night.png" class="img-city">
-                    <h4>19<span>&#176;</span>C</h4>
+                    <h4>19°C</h4>
                 </div>
             </div>
             <div class="card card-box">

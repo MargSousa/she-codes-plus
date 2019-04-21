@@ -19,7 +19,7 @@ h2 {
 }
 
 h3 {
-    font-size: 40px;
+    font-size: 32px;
     font-family: "Barlow Condensed";
 };
 
@@ -40,6 +40,7 @@ h4 {
     margin: 0 auto;
     font-size: 18px;
 }
+
 .time-search{
     font-size: 18px;
     margin-top: 5px;
@@ -51,15 +52,11 @@ h4 {
 }
 
 .img-sunrise {
-    width: 22%;
+    width: 18%;
 }
 
-.current-title {
-    float: left;
-}
-
-.btn-temperature {
-    float: right;
+.current-header {
+    margin-right: 100px;
 }
 
 .location-box {
@@ -75,17 +72,7 @@ h4 {
     width: 55%;
 }
 
-span {
-    content: "\00B0";
-    font-size: 20px;
-}
-  
-span.degrees {
-    content: "\00B0";
-    font-size: 32px;
-}
-
-.current-description {
+#current-description {
     text-transform: capitalize;
 }
 
