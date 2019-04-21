@@ -23,11 +23,17 @@ function handlePosition(position) {
 
     let sunsetUnix = new Date(sunsetTime*1000);
     let sunsetHours= sunsetUnix.getHours();
-    let sunsetMinutes = "0" + sunsetUnix.getMinutes();
+    let sunsetMinutes = sunsetUnix.getMinutes();
+    if (sunsetMinutes < 10) {
+      return `0${sunsetMinutes}`;
+    } 
 
     let sunriseUnix = new Date(sunriseTime*1000);
     let sunriseHours= "0" + sunriseUnix.getHours();
-    let sunriseMinutes = "0" + sunriseUnix.getMinutes();
+    let sunriseMinutes = sunriseUnix.getMinutes();
+    if (sunriseMinutes < 10) {
+      return `0${sunriseMinutes}`;
+    }
 
     let currentSunrise = `${sunriseHours}:${sunriseMinutes}`;
     let currentSunset = `${sunsetHours}:${sunsetMinutes}`;

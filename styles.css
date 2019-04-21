@@ -14,8 +14,8 @@ h2 {
     font-size: 36px;
     font-family: "Poiret One";
     text-align: left;
-    padding: 20px;
-    margin-left: 80px;
+    padding: 0px;
+    margin-left: 90px;
 }
 
 h3 {
@@ -46,12 +46,20 @@ h4 {
 }
 
 .temp-type {
-    font-size: 16px;
+    font-size: 18px;
     font-family: "Poiret One";
 }
 
 .img-sunrise {
     width: 22%;
+}
+
+.current-title {
+    float: left;
+}
+
+.btn-temperature {
+    float: right;
 }
 
 .location-box {
