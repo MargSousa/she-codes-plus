@@ -2,6 +2,9 @@ let units = "metric";
 let apiKey = "e4e4d6ef596a82924b1c141ba55e4e37";
 let apiUrl = "https://api.openweathermap.org/data/2.5";
 
+let buttonLocation = document.querySelector("#location-button");
+let form = document.querySelector("#weather-form");
+
 function getWeather(response){
   let currentCity = response.data.name;
   let currentCountry = response.data.sys.country;
@@ -11,8 +14,9 @@ function getWeather(response){
   let currentHumidity = response.data.main.humidity;
   let sunriseTime = response.data.sys.sunrise;
   let sunsetTime = response.data.sys.sunset;
+  let nowTime = response.data.dt;
 
-  let currentTimeUnix = new Date(response.data.dt*1000);
+  let currentTimeUnix = new Date(nowTime*1000);
   let currentHours= currentTimeUnix.getHours();
   let currentMinutes = currentTimeUnix.getMinutes();
   if (currentHours < 10) {
@@ -60,6 +64,13 @@ console.log(now);
 
 // Current Location 
 
+function getCurrentPositionNow(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(handlePosition);
+}
+
+buttonLocation.addEventListener("click",getCurrentPositionNow);
+
 function handlePosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
@@ -71,8 +82,6 @@ function handlePosition(position) {
 
   axios.get(`${apiUrl}/${apiPath}`).then(getWeather);
 }
-
-navigator.geolocation.getCurrentPosition(handlePosition);
 
 // Date-Search Function
 
@@ -102,23 +111,24 @@ function formatDate(date) {
 
   let timeSearch = document.querySelector("#time-search")
   timeSearch.innerHTML = `${searchTime}`;
-}
+};
 
- let nowDate = formatDate(now);
+let nowDate = formatDate(now);
 
 // Search functionality
-
-let form = document.querySelector("#weather-form");
 
 function handleSearch(event) {
   event.preventDefault();
   let input = document.querySelector("#weather-form-input");
-  console.log(input.value);
 
-  let apiParams = `q=${input.value}&appid=${apiKey}&units=${units}`;
-  let apiPath = `weather?${apiParams}`;
-
-  axios.get(`${apiUrl}/${apiPath}`).then(getWeather);
+  if (input.value.length > 0) {
+    console.log(input.value);
+    let apiParams = `q=${input.value}&appid=${apiKey}&units=${units}`;
+    let apiPath = `weather?${apiParams}`;
+    axios.get(`${apiUrl}/${apiPath}`).then(getWeather);
+  } else {
+    alert("Please enter a city");
+  }
 };
 
 form.addEventListener("submit",handleSearch);
