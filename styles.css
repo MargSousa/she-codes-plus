@@ -19,7 +19,7 @@ h2 {
 }
 
 h3 {
-    font-size: 32px;
+    font-size: px;
     font-family: "Barlow Condensed";
 };
 
@@ -84,7 +84,7 @@ button {
     width: 55%;
 }
 
-#current-description {
+.current-description {
     text-transform: capitalize;
 }
 
