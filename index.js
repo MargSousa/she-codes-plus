@@ -1,3 +1,5 @@
+let icon = document.querySelector("#current-weather");
+
 let units = "metric";
 let apiKey = "e4e4d6ef596a82924b1c141ba55e4e37";
 let apiUrl = "https://api.openweathermap.org/data/2.5";
@@ -12,6 +14,12 @@ function getWeather(response){
   let currentWind = Math.round(response.data.wind.speed * 3.6);
   let currentDescription = response.data.weather[0].description;
   let currentHumidity = response.data.main.humidity;
+
+  let currentIcon = response.data.weather[0].icon;
+  let iconUrl = `http://openweathermap.org/img/w/${currentIcon}.png`;
+  icon.setAttribute("src",iconUrl);
+  icon.setAttribute("alt",currentDescription);
+
   let sunriseTime = response.data.sys.sunrise;
   let sunsetTime = response.data.sys.sunset;
   let nowTime = response.data.dt;

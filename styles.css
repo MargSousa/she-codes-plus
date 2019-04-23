@@ -81,7 +81,8 @@ button {
 }
 
 .local-forecast {
-    width: 55%;
+    width: 35%;
+/*  width: 55%;    */   
 }
 
 .current-description {
