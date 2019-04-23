@@ -16,22 +16,12 @@ function getWeather(response){
   let sunsetTime = response.data.sys.sunset;
   let nowTime = response.data.dt;
 
-  let currentTimeUnix = new Date(nowTime*1000);
-  let currentHours= currentTimeUnix.getHours();
-  let currentMinutes = currentTimeUnix.getMinutes();
-  if (currentHours < 10) {
-    return `0${currentHours}`;
-  } 
-  if (currentMinutes < 10) {
-    return `0${currentMinutes}`;
-  } 
-
   let sunsetUnix = new Date(sunsetTime*1000);
-  let sunsetHours= sunsetUnix.getHours();
+  let sunsetHours = sunsetUnix.getHours();
   let sunsetMinutes = sunsetUnix.getMinutes();
   if (sunsetMinutes < 10) {
     return `0${sunsetMinutes}`;
-  } 
+  };
 
   let sunriseUnix = new Date(sunriseTime*1000);
   let sunriseHours= "0" + sunriseUnix.getHours();
@@ -40,13 +30,20 @@ function getWeather(response){
     return `0${sunriseMinutes}`;
   }
 
+  let getNewTime = new Date(nowTime*1000);
+  let currentHours = getNewTime.getHours();
+  let currentMinutes = getNewTime.getMinutes();
+  if (currentHours < 10) {
+    currentHours = "0" + currentHours;
+  };
+  if (currentMinutes < 10) {
+    currentMinutes = "0" + currentMinutes;
+  };
+
   let currentSunrise = `${sunriseHours}:${sunriseMinutes}`;
   let currentSunset = `${sunsetHours}:${sunsetMinutes}`;
   let currentTime = `${currentHours}:${currentMinutes}`;
 
-  console.log(currentTimeUnix);
-  console.log(currentTime);
-    
 // Converter códigos dos paísesm, ex: PT em Portugal 
   document.querySelector("#current-country").innerHTML = `${currentCountry}`;
   document.querySelector("#current-city").innerHTML = `${currentCity}`;
@@ -61,27 +58,6 @@ function getWeather(response){
 
 let now = new Date();
 console.log(now);
-
-// Current Location 
-
-function getCurrentPositionNow(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(handlePosition);
-}
-
-buttonLocation.addEventListener("click",getCurrentPositionNow);
-
-function handlePosition(position) {
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-  console.log(latitude);
-  console.log(longitude);
-
-  let apiParams = `lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
-  let apiPath = `weather?${apiParams}`;
-
-  axios.get(`${apiUrl}/${apiPath}`).then(getWeather);
-}
 
 // Date-Search Function
 
@@ -132,3 +108,24 @@ function handleSearch(event) {
 };
 
 form.addEventListener("submit",handleSearch);
+
+// Current Location 
+
+function handlePosition(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  console.log(latitude);
+  console.log(longitude);
+
+  let apiParams = `lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+  let apiPath = `weather?${apiParams}`;
+
+  axios.get(`${apiUrl}/${apiPath}`).then(getWeather);
+}
+
+function getCurrentPositionNow(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(handlePosition);
+}
+
+buttonLocation.addEventListener("click",getCurrentPositionNow);
