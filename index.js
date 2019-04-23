@@ -16,7 +16,7 @@ function getWeather(response){
   let currentHumidity = response.data.main.humidity;
 
   let currentIcon = response.data.weather[0].icon;
-  let iconUrl = `http://openweathermap.org/img/w/${currentIcon}.png`;
+  let iconUrl = `https://openweathermap.org/img/w/${currentIcon}.png`;
   icon.setAttribute("src",iconUrl);
   icon.setAttribute("alt",currentDescription);
 
