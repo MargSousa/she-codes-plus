@@ -20,6 +20,8 @@ function getWeather(response){
   icon.setAttribute("src",iconUrl);
   icon.setAttribute("alt",currentDescription);
 
+  console.log(currentIcon);
+
   let sunriseTime = response.data.sys.sunrise;
   let sunsetTime = response.data.sys.sunset;
   let nowTime = response.data.dt;
